@@ -32,14 +32,3 @@ path matches GitHub Pages).
 Then edit the graph, open the Simulator panel, and hit **Run** with the
 default request (`{ customer: { country: "US" }, cart: { weight: 50 } }`)
 — the first rule fires and `shippingFee` comes back as `40`.
-
-## Findings from this PoC (both landed in 0.1.1)
-
-- **Monaco worker specifiers**: monaco-editor's `exports` map
-  (`./*` → `./esm/vs/*`) breaks the older deep `esm/vs/...` worker imports
-  under exports-map-aware bundlers (Vite 8 / rolldown). 0.1.1's README now
-  documents the correct specifier this app uses:
-  `monaco-editor/editor/editor.worker.js?worker`.
-- **Panel components**: passing a `renderPanel` component triggered Vue's
-  "Component that was made a reactive object" warning. Fixed in 0.1.1 —
-  panels pass through without a consumer-side `markRaw()`.
