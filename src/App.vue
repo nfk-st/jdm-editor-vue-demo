@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { defineComponent, h, markRaw, ref } from 'vue';
+import { defineComponent, h, ref } from 'vue';
 import {
   DecisionGraph,
   GraphSimulator,
@@ -63,7 +63,7 @@ const panels = [
     title: 'Simulator',
     icon: h('span', '▶'),
     hideHeader: true,
-    renderPanel: markRaw(SimulatorPanel),
+    renderPanel: SimulatorPanel,
   },
 ];
 </script>

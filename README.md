@@ -34,8 +34,8 @@ default request (`{ customer: { country: "US" }, cart: { weight: 50 } }`)
 
 - **Monaco worker specifiers**: monaco-editor's `exports` map
   (`./*` → `./esm/vs/*`) means bundlers that honour exports maps need
-  `monaco-editor/editor/editor.worker.js?worker` — the README's
-  `monaco-editor/esm/vs/...` form only works with exports-map-unaware
-  resolution (e.g. Vite ≤ 7 defaults). Verified with Vite 8 (rolldown).
-- **Panel components**: pass `renderPanel` wrapped in `markRaw()`, or Vue
-  warns ("Component that was made a reactive object").
+  `monaco-editor/editor/editor.worker.js?worker` — the `esm/vs/...` form
+  only works with exports-map-unaware resolution (e.g. Vite ≤ 7 defaults).
+  Verified with Vite 8 (rolldown).
+- ~~`renderPanel` needs `markRaw()`~~ — fixed in `@nfk.st/jdm-editor-vue`
+  0.1.1; panels pass through without the Vue reactive-object warning.
