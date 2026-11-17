@@ -1,5 +1,7 @@
 # @nfk.st/jdm-editor-vue — Proof of Concept
 
+**Live demo: https://nfk-st.github.io/jdm-editor-vue-demo/**
+
 A fresh [Vite](https://vite.dev) + Vue 3 + TypeScript app that installs
 **[@nfk.st/jdm-editor-vue](https://www.npmjs.com/package/@nfk.st/jdm-editor-vue)
 from the npm registry** and uses it the way a real consumer would.
